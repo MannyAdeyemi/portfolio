@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Ground Prototype | Emmanuel Adeyemi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="nav-container">
+
+            <a href="index.html" class="logo">
+                EA
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html#work">Work</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- PROJECT HERO -->
+        <section class="project-hero">
+
+            <p class="project-label">
+                UNREAL ENGINE 5 • GAMEPLAY PROTOTYPE
+            </p>
+
+            <h1>
+                Training Ground
+            </h1>
+
+            <p class="project-intro">
+                An in-development third-person gameplay prototype built in Unreal Engine 5
+                to explore Blueprint-driven gameplay systems, NPC interaction,
+                dialogue UI and traversal mechanics.
+            </p>
+
+            <div class="project-details">
+
+                <div>
+                    <span>Engine</span>
+                    <p>Unreal Engine 5</p>
+                </div>
+
+                <div>
+                    <span>Project Type</span>
+                    <p>Gameplay Prototype</p>
+                </div>
+
+                <div>
+                    <span>Role</span>
+                    <p>Solo Gameplay Developer</p>
+                </div>
+
+                <div>
+                    <span>Focus</span>
+                    <p>Blueprint Gameplay Systems</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <img
+            src="assets/images/training ground/training_ground_environment.png"
+            alt="Unreal Engine training ground gameplay prototype"
+            class="hero-project-image"
+        >
+
+
+        <!-- OVERVIEW -->
+        <section class="case-study-section">
+
+            <p class="section-number">
+                01
+            </p>
+
+            <h2>
+                Overview
+            </h2>
+
+            <p>
+                Training Ground is an Unreal Engine 5 gameplay prototype designed as a space
+                for developing and testing third-person gameplay mechanics.
+            </p>
+
+            <p>
+                The current gameplay flow begins with the player entering the training area,
+                approaching an NPC and starting a dialogue interaction. The NPC acts as the
+                entry point into the training sequence, after which the player moves into
+                traversal-based challenges.
+            </p>
+
+            <p>
+                The first traversal mechanic implemented was a custom ledge-grab and climbing
+                system developed using Unreal Engine Blueprints.
+            </p>
+
+        </section>
+
+
+        <!-- GAMEPLAY FLOW -->
+        <section class="case-study-section">
+
+            <p class="section-number">
+                02
+            </p>
+
+            <h2>
+                Gameplay Flow
+            </h2>
+
+            <p>
+                The prototype is structured around a simple training sequence that connects
+                player interaction with traversal gameplay.
+            </p>
+
+            <div class="role-grid">
+
+                <span>Enter Training Ground</span>
+
+                <span>Approach NPC</span>
+
+                <span>Begin Dialogue</span>
+
+                <span>Start Training</span>
+
+                <span>Reach Traversal Area</span>
+
+                <span>Grab & Climb Ledge</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- NPC INTERACTION -->
+        <section class="case-study-section">
+
+            <p class="section-number">
+                03
+            </p>
+
+            <h2>
+                NPC Interaction & Dialogue
+            </h2>
+
+            <p>
+                I created an NPC interaction system using Unreal Engine Blueprints.
+                The NPC detects when the player enters or leaves the interaction area
+                and updates whether the player is currently able to interact.
+            </p>
+
+            <p>
+                When the interaction event is triggered, the NPC creates the dialogue
+                widget and displays it on screen. The system also keeps references to
+                the active player, NPC and dialogue widget so that the interaction can
+                be controlled through Blueprint logic.
+            </p>
+
+            <img
+                src="assets/images/training ground/training_ground_npc_blueprint.png"
+                alt="Unreal Engine Blueprint for NPC interaction and dialogue system"
+                class="case-study-image"
+            >
+
+        </section>
+
+
+        <!-- LEDGE DETECTION -->
+        <section class="case-study-section">
+
+            <p class="section-number">
+                04
+            </p>
+
+            <h2>
+                Ledge Detection
+            </h2>
+
+            <p>
+                The traversal system uses dedicated ledge actors to determine whether
+                the player is within range of a climbable surface.
+            </p>
+
+            <p>
+                The Blueprint detects when the character enters the ledge's grab area,
+                confirms the actor is the player character and updates the character's
+                ledge-related state.
+            </p>
+
+            <p>
+                When the player leaves the detection area, the system clears that state
+                so the character can no longer attempt to grab that ledge.
+            </p>
+
+            <img
+                src="assets/images/training ground/training_ground_ledge_blueprint.png"
+                alt="Blueprint used for player ledge detection"
+                class="case-study-image"
+            >
+
+        </section>
+
+
+        <!-- LEDGE GRAB -->
+        <section class="case-study-section">
+
+            <p class="section-number">
+                05
+            </p>
+
+            <h2>
+                Ledge Grab & Climbing
+            </h2>
+
+            <p>
+                The ledge mechanic is controlled through the third-person character
+                Blueprint and uses several gameplay states to manage the player's
+                relationship with the current ledge.
+            </p>
+
+            <div class="role-grid">
+
+                <span>CanGrabLedge</span>
+
+                <span>CurrentLedge</span>
+
+                <span>IsHanging</span>
+
+                <span>Character Movement</span>
+
+                <span>Ledge Detection</span>
+
+                <span>Climbing Logic</span>
+
+            </div>
+
+            <p>
+                These states allow the character to determine when a ledge is available,
+                track which ledge is currently being used and control when the character
+                enters or exits the hanging state.
+            </p>
+
+            <p>
+                The system connects movement, detection and character state logic inside
+                the player Blueprint to create the prototype's first traversal mechanic.
+            </p>
+
+            <img
+                src="assets/images/training ground/training_ground_character_blueprint.png"
+                alt="Third-person character Blueprint containing ledge traversal logic"
+                class="case-study-image"
+            >
+
+        </section>
+
+
+        <!-- LEVEL PROTOTYPING -->
+        <section class="case-study-section">
+
+            <p class="section-number">
+                06
+            </p>
+
+            <h2>
+                Level Prototyping
+            </h2>
+
+            <p>
+                I built the training ground as a greybox environment so I could focus on
+                gameplay mechanics before investing time in final environment art.
+            </p>
+
+            <p>
+                The layout provides different elevations and enclosed areas that can be
+                used to test player movement, climbing mechanics and future traversal
+                challenges.
+            </p>
+
+            <p>
+                Using simple geometry also makes it easier to quickly change distances,
+                wall heights and obstacle placement while testing new mechanics.
+            </p>
+
+            <img
+                src="assets/images/training ground/training_ground_environment.png"
+                alt="Greybox training ground environment built in Unreal Engine 5"
+                class="case-study-image"
+            >
+
+        </section>
+
+
+        <!-- TECHNICAL BREAKDOWN -->
+        <section class="case-study-section">
+
+            <p class="section-number">
+                07
+            </p>
+
+            <h2>
+                Technical Breakdown
+            </h2>
+
+            <div class="role-grid">
+
+                <span>Unreal Engine 5</span>
+
+                <span>Blueprint Visual Scripting</span>
+
+                <span>Third-Person Character</span>
+
+                <span>NPC Interaction</span>
+
+                <span>Dialogue UI</span>
+
+                <span>Collision / Overlap Events</span>
+
+                <span>Player State Logic</span>
+
+                <span>Traversal Systems</span>
+
+                <span>Greybox Level Design</span>
+
+            </div>
+
+            <p>
+                The prototype separates gameplay responsibilities between the player
+                character, NPC actors and traversal actors rather than placing all
+                gameplay logic into a single Blueprint.
+            </p>
+
+            <p>
+                This allowed me to experiment with how different gameplay objects
+                communicate with the player character while keeping individual systems
+                easier to understand and develop.
+            </p>
+
+        </section>
+
+
+        <!-- DEVELOPMENT STATUS -->
+        <section class="case-study-section">
+
+            <p class="section-number">
+                08
+            </p>
+
+            <h2>
+                Development Status
+            </h2>
+
+            <p>
+                The Training Ground prototype is currently in development.
+            </p>
+
+            <p>
+                The NPC interaction and dialogue system has been implemented, along with
+                the first traversal mechanic allowing the player to detect, grab and
+                climb a ledge.
+            </p>
+
+            <p>
+                The environment continues to act as a testing space where additional
+                gameplay and traversal mechanics can be developed and integrated.
+            </p>
+
+        </section>
+
+
+        <!-- WHAT I LEARNED -->
+        <section class="case-study-section">
+
+            <p class="section-number">
+                09
+            </p>
+
+            <h2>
+                What I Learned
+            </h2>
+
+            <p>
+                This project gave me practical experience building gameplay systems
+                rather than working only with Unreal Engine's cinematic tools.
+            </p>
+
+            <p>
+                Developing the NPC and traversal mechanics helped me better understand
+                Blueprint communication, player state management, overlap detection,
+                UI interaction and how gameplay systems connect to the third-person
+                character.
+            </p>
+
+            <p>
+                It also reinforced the value of prototyping mechanics in a simple
+                environment before focusing on visual polish.
+            </p>
+
+        </section>
+
+
+        <!-- BACK TO PROJECTS -->
+        <section class="case-study-section">
+
+            <a href="index.html#work" class="project-link">
+                ← Back to Projects
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            © 2026 Emmanuel Adeyemi
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
