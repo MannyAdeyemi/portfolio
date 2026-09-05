@@ -869,3 +869,27 @@ footer {
     color: #555;
     font-weight: 300;
 }
+/* =========================================================
+   SANGO'S ODYSSEY
+========================================================= */
+
+.concept-art-image {
+    width: min(620px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sango-hero-image {
+    width: min(780px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+}
+/* =========================================================
+   SANGO HERO IMAGE
+========================================================= */
+
+.sango-hero-image {
+    width: min(560px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+}
